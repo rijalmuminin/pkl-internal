@@ -35,3 +35,26 @@ Route::get('search/{keyword?}', function($keyword = null){
 Route::get('promo/{barang?}/{kode?}', function($barang = null, $kode = null){
     return view('promo', compact ('barang', 'kode'));
 }); 
+
+// import controller
+use App\Http\Controllers\MyController;
+
+Route::get ('/', function (){
+    return view('welcome');
+});
+
+// route buku
+Route::get ('buku', [MyController::class, 'index']);
+
+// tambah buku
+Route::get ('buku/create', [MyController::class, 'create']);
+Route::post ('buku', [MyController::class, 'store']);   
+// show buku
+Route::get ('buku/{id}', [MyController::class, 'show']);
+
+// edit $ update
+Route::get ('buku/{id}/edit', [MyController::class, 'edit']);
+Route::put ('buku/{id}/', [MyController::class, 'update']);
+
+// delete
+Route::delete ('buku/{id}/', [MyController::class, 'destroy']);

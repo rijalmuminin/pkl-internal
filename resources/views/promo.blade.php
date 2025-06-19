@@ -7,7 +7,7 @@
 </head>
 <body>
     @if($barang && $kode)
-    menampilkan promo untuk barang <strong>{{$barang}}</strong> dengan kode promo <strong>{{$kode}}</strong>
+    menampilkan promo untuk barang <strong>{{$barang}}</strong> <br> dengan kode promo <strong>{{$kode}}</strong>
     @elseif($barang)
     menampilkan promo untuk barang <strong>{{ $barang }}</strong>
     @else

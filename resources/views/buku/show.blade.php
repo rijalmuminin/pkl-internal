@@ -6,7 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    kategori {{ $kategori }} <br>
+    ID:{{ $buku['id'] }} <br>
+    Judul : {{ $buku['judul'] }} <br>
+    Harga: Rp.{{ number_format ($buku['harga'],0,',','.')}} <br>
+    Kategori: {{ $buku['kategori'] }}
 </body>
 </html>
-
